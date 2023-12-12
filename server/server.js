@@ -110,7 +110,7 @@ app.post("/login", (req, res) => {
       })
     })
     .catch(err => {
-      res.sendStatus(400)
+      res.status(400).json({ error: err.message +"hi" });
     })
 })
 
