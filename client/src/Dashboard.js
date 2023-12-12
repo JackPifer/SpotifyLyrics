@@ -33,7 +33,8 @@ export default function Dashboard({ code }) {
     if (!playingTrack) return
 
     axios
-      .get("https://www.pifelife.com/lyrics", {
+      //.get("https://www.pifelife.com/lyrics", {
+        .get("https://vast-wave-23279-df071e0e2194.herokuapp.com/lyrics", {
         params: {
           track: playingTrack.title,
           artist: playingTrack.artist,

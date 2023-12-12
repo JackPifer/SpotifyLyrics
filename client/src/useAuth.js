@@ -55,7 +55,8 @@ export default function useAuth(code) {
 
   useEffect(() => {
     axios
-      .post("https://www.pifelife.com/login", {
+      //.post("https://www.pifelife.com/login", {
+      .post("https://vast-wave-23279-df071e0e2194.herokuapp.com/login", {
         code,
       })
       .then(res => {
@@ -73,7 +74,8 @@ export default function useAuth(code) {
     if (!refreshToken || !expiresIn) return
     const interval = setInterval(() => {
       axios
-        .post("https://www.pifelife.com/refresh", {
+        //.post("https://www.pifelife.com/refresh", {
+        .post("https://vast-wave-23279-df071e0e2194.herokuapp.com/refresh", {
           refreshToken,
         })
         .then(res => {
