@@ -55,7 +55,7 @@ export default function useAuth(code) {
 
   useEffect(() => {
     axios
-      .post("https://pifelife.com/login", {
+      .post("https://www.pifelife.com/login", {
         code,
       })
       .then(res => {
@@ -73,7 +73,7 @@ export default function useAuth(code) {
     if (!refreshToken || !expiresIn) return
     const interval = setInterval(() => {
       axios
-        .post("https://pifelife.com/refresh", {
+        .post("https://www.pifelife.com/refresh", {
           refreshToken,
         })
         .then(res => {
